@@ -8,11 +8,12 @@ gateway_0 = {
 	build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
 															# if this option is active, the placement_rules will be completely ignored
 	show_galactic_map_icon = no
-	build_time = 1080
+	build_time = 2800
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 2500
+			alloys = 5000
+			energy = 6000
 			influence = 100
 		}
 	}
@@ -25,8 +26,16 @@ gateway_0 = {
 	possible = {
 		exists = starbase
 		custom_tooltip = {
-			fail_text = "requires_inside_border"
-			is_inside_border = from
+			fail_text = "gatewayBuild_requires_inside_border_or_federation_policy"
+			OR = {
+				is_inside_border = from
+				owner = {
+					AND = {
+						is_in_federation_with = from
+						has_policy_flag = "gatewayBuild_permitted"
+					}
+				}
+			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
@@ -79,44 +88,11 @@ gateway_0 = {
 			}
 		}		
 	}
-	
+
+	bypass_type = gateway
+
 	on_build_start = {}
 	on_build_cancel = {}	
-	on_build_complete = {
-		from = { country_event = { id = apoc.14 } }
-	}
-}
-
-gateway_final = {
-	entity = "gateway_entity"
-	construction_entity = "construction_platform_entity"
-	portrait = "GFX_megastructure_construction_background"
-	place_entity_on_planet_plane = no
-	# build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
-															# if this option is active, the placement_rules will be completely ignored
-	show_galactic_map_icon = no
-	potential = {
-		has_technology = tech_gateway_activation
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_technology_gateway_construction"
-			from = { has_technology = tech_gateway_construction }
-		}
-	}
-	upgrade_from = {
-		gateway_0
-	}
-	build_time = 1800
-	resources = {
-		category = megastructures
-		cost = {
-			alloys = 2500
-			energy = 6000
-		}
-	}
-	construction_blocks_others = no
-	bypass_type = gateway
 	on_build_complete = {
 		activate_gateway = fromfrom
 		if = {
@@ -127,7 +103,7 @@ gateway_final = {
 				finish_upgrade = yes
 			}
 		}
-		from = { 
+		from = {
 			country_event = { id = apoc.13 }
 			country_event = { id = apoc.11 }
 		}

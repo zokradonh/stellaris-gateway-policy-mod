@@ -4,7 +4,7 @@
 # POLICIES
 #####################################
 
- policy_gatewayBuild:0 "Foreign Gateways"
+ policy_gatewayBuild:0 "Federated Gateways"
  policy_gatewayBuild_desc:0 "Allow other empires in same federation to construct gateways within our borders.\n"
  gatewayBuild_denied:0 "Denied"
  gatewayBuild_denied_name:0 "Denied"
@@ -12,4 +12,4 @@
  gatewayBuild_permitted:0 "Permitted"
  gatewayBuild_permitted_name:0 "Permitted"
  gatewayBuild_permitted_desc:0 "Gateway construction permitted\nThe more the merrier - allow other federated empires to build gateways within our borders.\n"
-
+ gatewayBuild_requires_inside_border_or_federation_policy:0 "Cannot build outside allowed federation borders."

@@ -12,4 +12,4 @@
  gatewayBuild_permitted:0 "Gestattet"
  gatewayBuild_permitted_name:0 "Gestattet"
  gatewayBuild_permitted_desc:0 "Föderations-Sternentore gestattet\nLasst uns gemeinsam springen! Erlaube Föderationspartnern das Bauen von Sternentoren innerhalb unserer Grenzen.\n"
-
+ gatewayBuild_requires_inside_border_or_federation_policy:0 "Muss innerhalb der erlaubten Föderationsgrenzen platziert werden."
