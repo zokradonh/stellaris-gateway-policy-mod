@@ -1,6 +1,6 @@
 # see README.txt for example
 
-gateway_0 = {
+gateway_final = {
 	entity = "construction_platform_entity"
 	construction_entity = "construction_platform_entity"
 	portrait = "GFX_megastructure_construction_background"
@@ -31,9 +31,18 @@ gateway_0 = {
 				is_inside_border = from
 				owner = {
 					AND = {
-						is_in_federation_with = from
+						OR = {
+							is_overlord_to = from
+							is_in_federation_with = from
+						}
 						has_policy_flag = "gatewayBuild_permitted"
 					}
+				}
+				from = {
+					is_overlord_to = prev.owner
+				}
+				owner.overlord = {
+					is_same_empire = from.overlord
 				}
 			}
 		}
@@ -62,7 +71,9 @@ gateway_0 = {
 			from = { has_technology = tech_gateway_construction }
 		}
 	}
-
+	#upgrade_from = {
+	#	gateway_0
+	#}
 	placement_rules = {			# those would be ignored since the gateway is being "free-placed" between the inner and outer radius of the system
 	}
 	
@@ -108,6 +119,24 @@ gateway_0 = {
 			country_event = { id = apoc.11 }
 		}
 	}
+}
+
+# placeholder for pre-mod save games
+gateway_0 = {
+	entity = "gateway_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	# build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
+															# if this option is active, the placement_rules will be completely ignored
+	show_galactic_map_icon = no
+
+	potential = {
+		always = no
+	}
+
+	construction_blocks_others = no
+	bypass_type = gateway
 }
 
 # Disabled Gateway
