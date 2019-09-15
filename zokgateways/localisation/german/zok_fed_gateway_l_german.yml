@@ -13,3 +13,7 @@
  gatewayBuild_permitted_name:0 "Gestattet"
  gatewayBuild_permitted_desc:0 "Föderations-Sternentore gestattet\nLasst uns gemeinsam springen! Erlaube Föderationspartnern das Bauen von Sternentoren innerhalb unserer Grenzen.\n"
  gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$Muss innerhalb der erlaubten Föderationsgrenzen platziert werden."
+ gatewayBuild_gateway_replaced:0 "Zerstörte Sternentore Reparieren"
+ gatewayBuild_gateway_replaced_DESC:0 "Ein hastig rekonstruiertes Sternentor."
+ gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "(Nützlich, um Online Sternentore in föderiertem/vassalisiertem Gebiet zu bringen.)"
+ gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$Muss ein zerstörtes Sternentor haben, das repariert werden kann."

@@ -13,3 +13,7 @@
  gatewayBuild_permitted_name:0 "Permitted"
  gatewayBuild_permitted_desc:0 "Gateway construction permitted\nThe more the merrier - allow other federated empires to build gateways within our borders.\n"
  gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$Cannot build outside allowed federation borders."
+ gatewayBuild_gateway_replaced:0 "Restored Gateway"
+ gatewayBuild_gateway_replaced_DESC:0 "A hastily reconstructed gateway."
+ gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "(Useful to bring online a gateway in federated/vassalized territory.)"
+ gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$Must have a ruined gateway that can be repaired."
