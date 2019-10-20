@@ -6,12 +6,14 @@ gatewayBuild = {
 	
 	option = {
 		name = "gatewayBuild_denied"
+		
 		policy_flags = {
 		}
 		
 		valid = {
 			is_subject = no
 		}
+
 		AI_weight = {
 			modifier = {
 				factor = 2
@@ -40,11 +42,13 @@ gatewayBuild = {
 		policy_flags = {
 			gatewayBuild_permitted
 		}
+
 		modifier = {
 		}
 		
 		valid = {
-			}
+		}
+
 		AI_weight = {
 			modifier = {
 				factor = 1
