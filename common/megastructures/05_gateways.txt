@@ -25,17 +25,22 @@ gateway_final = {
 
 	possible = {
 		exists = starbase
-		custom_tooltip = {
+		custom_tooltip = { #owner: territory owner from: construction ship owner
 			fail_text = "gatewayBuild_requires_inside_border_or_federation_policy"
 			OR = {
 				is_inside_border = from
 				owner = {
-					AND = {
-						OR = {
+					OR = {
+						AND = {
 							is_overlord_to = from
-							is_in_federation_with = from
+							has_policy_flag = "gatewayBuild_permitted"
 						}
-						has_policy_flag = "gatewayBuild_permitted"
+						AND = {
+							is_in_federation_with = from
+							federation = {
+								has_federation_law = gateway_build_yes
+							}
+						}
 					}
 				}
 				from = {
@@ -237,18 +242,22 @@ gatewayBuild_gateway_replaced = {
 			exists = starbase
 			has_owner = no
 		}
-		custom_tooltip = {
+		custom_tooltip = { #owner: territory owner from: construction ship owner
 			fail_text = "gatewayBuild_requires_inside_border_or_federation_policy"
 			OR = {
 				is_inside_border = from
-				has_owner = no
 				owner = {
-					AND = {
-						OR = {
+					OR = {
+						AND = {
 							is_overlord_to = from
-							is_in_federation_with = from
+							has_policy_flag = "gatewayBuild_permitted"
 						}
-						has_policy_flag = "gatewayBuild_permitted"
+						AND = {
+							is_in_federation_with = from
+							federation = {
+								has_federation_law = gateway_build_yes
+							}
+						}
 					}
 				}
 				from = {

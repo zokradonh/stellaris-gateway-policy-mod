@@ -4,16 +4,27 @@
 # POLICIES
 #####################################
 
- policy_gatewayBuild:0 "Federated Gateways"
- policy_gatewayBuild_desc:0 "Allow other empires in same federation to construct gateways within our borders.\n"
+ policy_gatewayBuild:0 "Vassal Gateways"
+ policy_gatewayBuild_desc:0 "Allow vassals to construct gateways within our borders.\n"
  gatewayBuild_denied:0 "Denied"
  gatewayBuild_denied_name:0 "Denied"
- gatewayBuild_denied_desc:0 "Gateway construction denied\nWe have no need for foreign aid - prohibit other federated empires from building gateways within our borders.\n"
+ gatewayBuild_denied_desc:0 "Gateway construction denied\nWe have no need for foreign aid - prohibit vassals from building gateways within our borders.\n"
  gatewayBuild_permitted:0 "Permitted"
  gatewayBuild_permitted_name:0 "Permitted"
- gatewayBuild_permitted_desc:0 "Gateway construction permitted\nThe more the merrier - allow other federated empires to build gateways within our borders.\n"
- gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$Cannot build outside allowed federation borders."
+ gatewayBuild_permitted_desc:0 "Gateway construction permitted\nThe more the merrier - allow vassals to build gateways within our borders.\n"
+ gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$Cannot build outside allowed federation/vassal borders."
  gatewayBuild_gateway_replaced:0 "Restored Gateway"
  gatewayBuild_gateway_replaced_DESC:0 "A hastily reconstructed gateway."
  gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "(Useful to bring online a damaged gateway in federated/vassalized territory.)"
  gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$Must have a ruined gateway that can be repaired."
+
+#####################################
+# Federation Laws
+#####################################
+
+ law_category_gateway_build:0 "Federated Gateways"
+ law_category_gateway_build_desc:0 "This determines if we allow members to build/repair gateways in federation space."
+ gateway_build_no:0 "Prohibited"
+ gateway_build_no_desc:0 "Federation members are prohibited to build gateways in other member's space."
+ gateway_build_yes:0 "Allowed"
+ gateway_build_yes_desc:0 "Federation members are allowed to build gateways in other member's space."

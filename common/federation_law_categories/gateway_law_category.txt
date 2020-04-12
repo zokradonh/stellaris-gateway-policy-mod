@@ -1,0 +1,6 @@
+law_category_gateway_build = {
+	laws = {
+		gateway_build_no
+		gateway_build_yes
+	}
+}

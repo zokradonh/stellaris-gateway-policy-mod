@@ -4,16 +4,27 @@
 # POLICIES
 #####################################
 
- policy_gatewayBuild:0 "Föderations-Sternentore"
- policy_gatewayBuild_desc:0 "Erlaube Föderationsmitgliedern Sternentore in unseren Grenzen zu bauen.\n"
+ policy_gatewayBuild:0 "Vasallen-Sternentore"
+ policy_gatewayBuild_desc:0 "Erlaube Vasallen Sternentore in unseren Grenzen und den Grenzen anderer Vasallen zu bauen.\n"
  gatewayBuild_denied:0 "Verboten"
  gatewayBuild_denied_name:0 "Verboten"
- gatewayBuild_denied_desc:0 "Bau von Föderations-Sternentoren verboten\nWir brauchen keine Fremdhilfe - verweigere Föderationspartnern das Bauen von Sternentoren innerhalb unserer Grenzen.\n"
+ gatewayBuild_denied_desc:0 "Bau von Vasallen Sternentoren verboten\nWir brauchen keine Fremdhilfe - verweigere Vasallen das Bauen von Sternentoren innerhalb unserer Grenzen.\n"
  gatewayBuild_permitted:0 "Gestattet"
  gatewayBuild_permitted_name:0 "Gestattet"
- gatewayBuild_permitted_desc:0 "Bau von Föderations-Sternentoren gestattet\nLasst uns gemeinsam springen! Erlaube Föderationspartnern das Bauen von Sternentoren innerhalb unserer Grenzen.\n"
- gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$Muss innerhalb der erlaubten Föderationsgrenzen platziert werden."
+ gatewayBuild_permitted_desc:0 "Bau von Vasallen-Sternentoren gestattet\nLasst uns gemeinsam springen! Erlaube Vasallen das Bauen von Sternentoren innerhalb unserer Grenzen.\n"
+ gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$Muss innerhalb der erlaubten Föderations/Overlord-Grenzen platziert werden."
  gatewayBuild_gateway_replaced:0 "Zerstörte Sternentore reparieren"
  gatewayBuild_gateway_replaced_DESC:0 "Ein rekonstruiertes Sternentor."
  gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "(Um zerstörte Sternentore in föderiertem/vassalisiertem Gebiet zu reparieren.)"
  gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$Muss ein zerstörtes Sternentor haben, das repariert werden kann."
+
+#####################################
+# Federation Laws
+#####################################
+
+ law_category_gateway_build:0 "Föderations-Sternentorbau"
+ law_category_gateway_build_desc:0 "Legt fest, ob jeder innerhalb der gesamten Föderationsgrenzen Sternentore bauen/reparieren darf."
+ gateway_build_no:0 "Verboten"
+ gateway_build_no_desc:0 "Mitglieder können nur innerhalb der eigenen Grenzen Sternentore bauen/reparieren."
+ gateway_build_yes:0 "Erlaubt"
+ gateway_build_yes_desc:0 "Mitglieder können auch im Gebiet von anderen Mitgliedern Sternentore bauen/reparieren."
