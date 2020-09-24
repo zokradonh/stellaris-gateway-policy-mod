@@ -1,0 +1,30 @@
+﻿l_simp_chinese:
+
+#####################################
+# POLICIES
+#####################################
+ policy_gatewayBuild:0 "附庸与星门"
+ policy_gatewayBuild_desc:0 "我们可以决定是否允许附庸在我们境内建造星门。\n"
+ gatewayBuild_denied:0 "禁止"
+ gatewayBuild_denied_name:0 "$gatewayBuild_denied$"
+ gatewayBuild_denied_desc:0 "我们不需要外人的帮助。\n\n§E禁止附庸在我们境内建造星门§!\n"
+ gatewayBuild_permitted:0 "允许"
+ gatewayBuild_permitted_name:0 "$gatewayBuild_permitted$"
+ gatewayBuild_permitted_desc:0 "星门多多益善。\n\n§E允许附庸在我们境内建造星门§!\n"
+ gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$不能在我国境外，盟友境外或附庸境外建造星门。"
+ gatewayBuild_gateway_replaced:0 "星门修复器"
+ gatewayBuild_gateway_replaced_DESC:0 "修复星门""
+ gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "用以修复受损星门的巨构"
+ gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$同一星系中必须有损坏的星门以供修理。"
+ gateway_final_MEGASTRUCTURE_DETAILS:0 "一个允许舰船通过亚空间瞬间移动到其他星门的传送门。"
+
+#####################################
+# Federation Laws
+#####################################
+
+ law_category_gateway_build:0 "星门"
+ law_category_gateway_build_desc:0 "这将决定能否在联邦其他成员境内修复或建造星门。"
+ gateway_build_no:0 "禁止"
+ gateway_build_no_desc:0 "联邦成员不能在其他成员境内修复或建造星门。"
+ gateway_build_yes:0 "允许"
+ gateway_build_yes_desc:0 "联邦成员可以在其他成员境内修复或建造星门。"
