@@ -18,6 +18,7 @@ gateway_final = {
 		}
 	}
 	construction_blocks_others = no
+	construction_blocked_by_others = no
 
 	potential = {
 		has_technology = tech_gateway_construction
@@ -142,6 +143,7 @@ gateway_0 = {
 	}
 
 	construction_blocks_others = no
+	construction_blocked_by_others = no
 	bypass_type = gateway
 }
 
@@ -154,6 +156,7 @@ gateway_ruined = {
 	bypass_type = gateway
 	show_galactic_map_icon = no
 	construction_blocks_others = no
+	construction_blocked_by_others = no
 
 	potential = {
 		always = no
@@ -191,6 +194,7 @@ gateway_restored = {
 		}
 	}
 	construction_blocks_others = no
+	construction_blocked_by_others = no
 	bypass_type = gateway
 	on_build_complete = {
 		activate_gateway = fromfrom
@@ -232,6 +236,7 @@ gatewayBuild_gateway_replaced = {
 		}
 	}
 	construction_blocks_others = no
+	construction_blocked_by_others = no
 
 	potential = {
 		has_technology = tech_gateway_activation

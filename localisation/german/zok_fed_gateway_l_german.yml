@@ -17,6 +17,7 @@
  gatewayBuild_gateway_replaced_DESC:0 "Ein rekonstruiertes Sternentor."
  gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "(Um zerstörte Sternentore in föderiertem/vassalisiertem Gebiet zu reparieren.)"
  gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$Muss ein zerstörtes Sternentor haben, das repariert werden kann."
+ gateway_final_MEGASTRUCTURE_DETAILS:0 "Ein Portal durch den Subraum, dass die sofortige Reise zu anderen Sternentoren erlaubt."
 
 #####################################
 # Federation Laws
