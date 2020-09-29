@@ -23,7 +23,7 @@
 #####################################
 
  law_category_gateway_build:0 "星门"
- law_category_gateway_build_desc:0 "这将决定能否在联邦其他成员境内修复或建造星门。"
+ law_category_gateway_build_desc:0 "这将决定能否在联邦其他成员境内修复或建造星门。如果一个成员是另一个成员的宗主国，那么由宗主国的国内政策来控制。"
  gateway_build_no:0 "禁止"
  gateway_build_no_desc:0 "联邦成员不能在其他成员境内修复或建造星门。"
  gateway_build_yes:0 "允许"
