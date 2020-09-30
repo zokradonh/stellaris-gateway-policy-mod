@@ -30,6 +30,7 @@ gateway_final = {
 			fail_text = "gatewayBuild_requires_inside_border_or_federation_policy"
 			OR = {
 				is_inside_border = from
+				from = { has_defensive_pact = owner	}
 				owner = {
 					OR = {
 						AND = {

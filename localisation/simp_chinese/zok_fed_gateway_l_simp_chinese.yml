@@ -11,7 +11,7 @@
  gatewayBuild_permitted:0 "允许"
  gatewayBuild_permitted_name:0 "$gatewayBuild_permitted$"
  gatewayBuild_permitted_desc:0 "星门多多益善。\n\n§E允许附庸在我们境内建造星门§!\n"
- gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$不能在我国境外，盟友境外或附庸境外建造星门。"
+ gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$当前政策或联邦法律不允许在我国境外，盟友境外或附庸境外建造星门。"
  gatewayBuild_gateway_replaced:0 "星门修复器"
  gatewayBuild_gateway_replaced_DESC:0 "修复星门""
  gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "用以修复受损星门的巨构"
@@ -23,7 +23,7 @@
 #####################################
 
  law_category_gateway_build:0 "星门"
- law_category_gateway_build_desc:0 "这将决定能否在联邦其他成员境内修复或建造星门。如果一个成员是另一个成员的宗主国，那么由宗主国的国内政策来控制。"
+ law_category_gateway_build_desc:0 "这将决定能否在联邦其他成员境内修复或建造星门。"
  gateway_build_no:0 "禁止"
  gateway_build_no_desc:0 "联邦成员不能在其他成员境内修复或建造星门。"
  gateway_build_yes:0 "允许"
