@@ -297,10 +297,6 @@ gatewayBuild_gateway_replaced = {
 			fail_text = "gatewayBuild_requires_ruined_gateway_to_replace"
 			has_megastructure = gateway_ruined
 		}
-		custom_tooltip = {
-			fail_text = "requires_technology_gateway_construction"
-			from = { has_technology = tech_gateway_construction }
-		}
 	}
 	#upgrade_from = {
 	#	gateway_0
