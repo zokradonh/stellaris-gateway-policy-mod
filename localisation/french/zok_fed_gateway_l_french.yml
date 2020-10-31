@@ -24,8 +24,8 @@
 #####################################
 
  law_category_gateway_build:0 "Federated Gateways"
- law_category_gateway_build_desc:0 "This determines if we allow members to build/repair gateways in federation space."
+ law_category_gateway_build_desc:0 "This determines if we allow members to build/repair gateways in federation territory."
  gateway_build_no:0 "Prohibited"
- gateway_build_no_desc:0 "Federation members are prohibited to build gateways in other member's space."
+ gateway_build_no_desc:0 "Federation members are prohibited to build gateways in other member's territory."
  gateway_build_yes:0 "Allowed"
- gateway_build_yes_desc:0 "Federation members are allowed to build gateways in other member's space."
+ gateway_build_yes_desc:0 "Federation members are allowed to build gateways in other member's territory."
