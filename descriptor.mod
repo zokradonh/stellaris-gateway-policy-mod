@@ -4,6 +4,6 @@ tags={
 	"Gameplay"
 }
 picture="thumbnail.png"
-supported_version="2.8.*"
+supported_version="3.0.*"
 path="C:/Users/deran/OneDrive/Dokumente/Paradox Interactive/Stellaris/mod/zokgateways"
 remote_file_id="1766534634"

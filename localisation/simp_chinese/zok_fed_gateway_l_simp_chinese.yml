@@ -15,7 +15,11 @@
  gatewayBuild_gateway_replaced:0 "星门修复器"
  gatewayBuild_gateway_replaced_DESC:0 "修复星门""
  gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "用以修复受损星门的巨构"
+ gatewayBuild_gateway_new:0 "Foreign Territory Gateway"
+ gatewayBuild_gateway_new_DESC:0 "Gateway in foreign territory."
+ gatewayBuild_gateway_new_MEGASTRUCTURE_DETAILS:0 "We can built this gateway in federated/vasallized territory."
  gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$同一星系中必须有损坏的星门以供修理。"
+ gatewayBuild_requires_foreign_border:0 "$TRIGGER_FAIL$We can only built this gateway outside of our borders."
  gateway_final_MEGASTRUCTURE_DETAILS:0 "一个允许舰船通过亚空间瞬间移动到其他星门的传送门。"
 
 #####################################

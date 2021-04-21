@@ -16,7 +16,11 @@
  gatewayBuild_gateway_replaced:0 "Restored Gateway"
  gatewayBuild_gateway_replaced_DESC:0 "A hastily reconstructed gateway."
  gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "Useful to bring online a damaged gateway in federated/vassalized territory."
+ gatewayBuild_gateway_new:0 "Foreign Territory Gateway"
+ gatewayBuild_gateway_new_DESC:0 "Gateway in foreign territory."
+ gatewayBuild_gateway_new_MEGASTRUCTURE_DETAILS:0 "We can built this gateway in federated/vasallized territory."
  gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$Must have a ruined gateway that can be repaired."
+ gatewayBuild_requires_foreign_border:0 "$TRIGGER_FAIL$We can only built this gateway outside of our borders."
  gateway_final_MEGASTRUCTURE_DETAILS:0 "A portal through subspace that allows instantaneous travel to other Gateways."
 
 #####################################
