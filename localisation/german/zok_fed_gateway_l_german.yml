@@ -12,11 +12,15 @@
  gatewayBuild_permitted:0 "Gestattet"
  gatewayBuild_permitted_name:0 "Gestattet"
  gatewayBuild_permitted_desc:0 "Bau von Vasallen-Sternentoren gestattet\nLasst uns gemeinsam springen! Erlaube Vasallen das Bauen von Sternentoren innerhalb unserer Grenzen.\n"
- gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$Muss innerhalb der erlaubten Föderations/Overlord-Grenzen platziert werden."
- gatewayBuild_gateway_replaced:0 "Zerstörte Sternentore reparieren"
+ gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$Muss innerhalb der erlaubten Föderations- oder Lehnsherrgrenzen platziert werden."
+ gatewayBuild_gateway_replaced:0 "Zerstörtes Sternentor reparieren"
  gatewayBuild_gateway_replaced_DESC:0 "Ein rekonstruiertes Sternentor."
- gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "(Um zerstörte Sternentore in föderiertem/vassalisiertem Gebiet zu reparieren.)"
+ gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "Um zerstörte Sternentore in föderiertem/vassalisiertem Gebiet zu reparieren."
+ gatewayBuild_gateway_new:0 "Sternentor in fremden Gebiet"
+ gatewayBuild_gateway_new_DESC:0 "Ein Sternentor in fremden Gebiet errichten."
+ gatewayBuild_gateway_new_MEGASTRUCTURE_DETAILS:0 "Um Sternentore in föderiertem/vassalisiertem Gebiet zu errichten."
  gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$Muss ein zerstörtes Sternentor haben, das repariert werden kann."
+ gatewayBuild_requires_foreign_border:0 "$TRIGGER_FAIL$Dieses Sternentor kann nur außerhalb unserer Grenzen errichtet werden."
  gateway_final_MEGASTRUCTURE_DETAILS:0 "Ein Portal durch den Subraum, dass die sofortige Reise zu anderen Sternentoren erlaubt."
 
 #####################################

@@ -1,225 +1,4 @@
-# see README.txt for example
-
-gateway_final = {
-	entity = "gateway_entity"
-	construction_entity = "construction_platform_entity"
-	portrait = "GFX_megastructure_construction_background"
-	place_entity_on_planet_plane = no
-	build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
-															# if this option is active, the placement_rules will be completely ignored
-	show_galactic_map_icon = no
-	build_time = 2800
-	resources = {
-		category = megastructures
-		cost = {
-			alloys = 5000
-			energy = 6000
-			influence = 100
-		}
-	}
-	construction_blocks_others = no
-	construction_blocked_by_others = no
-
-	potential = {
-		has_technology = tech_gateway_construction
-	}
-
-	possible = {
-		exists = starbase
-		custom_tooltip = { #owner: territory owner from: construction ship owner
-			fail_text = "gatewayBuild_requires_inside_border_or_federation_policy"
-			OR = {
-				is_inside_border = from
-				from = { has_defensive_pact = owner	}
-				owner = {
-					OR = {
-						AND = {
-							is_overlord_to = from
-							has_policy_flag = "gatewayBuild_permitted"
-						}
-						AND = {
-							is_in_federation_with = from
-							federation = {
-								has_federation_law = gateway_build_yes
-							}
-						}
-					}
-				}
-				from = {
-					is_overlord_to = prev.owner
-				}
-				owner.overlord = {
-					is_same_empire = from.overlord
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_surveyed_system"
-			NOT = {
-				any_system_planet = {
-					is_surveyed = {
-						who = prev.from
-						status = no
-					}
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_existing_gateway"
-			NOR = {
-				has_megastructure = gateway_0
-				has_megastructure = gateway_ruined
-				has_megastructure = gateway_restored
-				has_megastructure = gateway_final
-				has_megastructure = gatewayBuild_gateway_replaced
-			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_gateway_construction"
-			from = { has_technology = tech_gateway_construction }
-		}
-	}
-	#upgrade_from = {
-	#	gateway_0
-	#}
-	placement_rules = {			# those would be ignored since the gateway is being "free-placed" between the inner and outer radius of the system
-	}
-	
-	# root = system
-	# from = country
-	ai_weight = {
-		factor = 5
-		
-		modifier = {
-			factor = 0
-			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
-		}
-
-		modifier = {
-			factor = 0
-			any_neighbor_system = { 
-				OR = {
-					has_megastructure = gateway_0
-					has_megastructure = gateway_ruined
-					has_megastructure = gateway_restored
-					has_megastructure = gateway_final
-				}
-			}
-		}		
-	}
-
-	bypass_type = gateway
-
-	on_build_start = {}
-	on_build_cancel = {}	
-	on_build_complete = {
-		activate_gateway = fromfrom
-		if = {
-			limit = { num_active_gateways = 1 }
-			random_megastructure = {
-				limit = { is_megastructure_type = gateway_ruined }
-				upgrade_megastructure_to = gateway_restored
-				finish_upgrade = yes
-			}
-		}
-		from = {
-			country_event = { id = apoc.13 }
-			country_event = { id = apoc.11 }
-		}
-	}
-}
-
-# placeholder for pre-mod save games
-gateway_0 = {
-	entity = "gateway_entity"
-	construction_entity = "construction_platform_entity"
-	portrait = "GFX_megastructure_construction_background"
-	place_entity_on_planet_plane = no
-	# build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
-															# if this option is active, the placement_rules will be completely ignored
-	show_galactic_map_icon = no
-
-	potential = {
-		always = no
-	}
-
-	construction_blocks_others = no
-	construction_blocked_by_others = no
-	bypass_type = gateway
-}
-
-# Disabled Gateway
-gateway_ruined = {
-	entity = "deactivated_gateway_entity"
-	portrait = "GFX_megastructure_construction_background"
-	place_entity_on_planet_plane = no
-	build_outside_gravity_well = yes
-	bypass_type = gateway
-	show_galactic_map_icon = no
-	construction_blocks_others = no
-	construction_blocked_by_others = no
-
-	potential = {
-		always = no
-	}
-}
-
-# Restored Gateway
-gateway_restored = {
-	entity = "reactivated_gateway_entity"
-	construction_entity = "gateway_portal_entity"
-	portrait = "GFX_megastructure_construction_background"
-	place_entity_on_planet_plane = no
-	# build_outside_gravity_well = yes
-	show_galactic_map_icon = no
-	
-	potential = {
-		has_technology = tech_gateway_activation
-	}
-	
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_technology_gateway_activation"
-			from = { has_technology = tech_gateway_activation }
-		}
-	}
-	upgrade_from = {
-		gateway_ruined
-	}
-	build_time = 720
-	resources = {
-		category = megastructures
-		cost = {
-			alloys = 2500
-			energy = 6000
-		}
-	}
-	construction_blocks_others = no
-	construction_blocked_by_others = no
-	bypass_type = gateway
-	on_build_complete = {
-		activate_gateway = fromfrom
-		if = {
-			limit = { num_active_gateways = 1 }
-			random_megastructure = {
-				limit = { is_megastructure_type = gateway_ruined }
-				if = {
-					limit = { exists = solar_system.starbase }
-					solar_system.starbase.owner = { set_country_flag = did_not_repair_gateway }
-				}
-				upgrade_megastructure_to = gateway_restored
-				finish_upgrade = yes
-			}
-		}
-		from = { 
-			country_event = { id = apoc.12 }
-			country_event = { id = apoc.10 }
-			country_event = { id = origin.1050 }
-		}
-	}
-}
-
-# Replaced Gateway
+# Repair gateway in foreign space
 gatewayBuild_gateway_replaced = {
 	entity = "gateway_entity"
 	construction_entity = "construction_platform_entity"
@@ -228,7 +7,7 @@ gatewayBuild_gateway_replaced = {
 	build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
 															# if this option is active, the placement_rules will be completely ignored
 	show_galactic_map_icon = no
-	build_time = 1000
+	build_time = 1080
 	resources = {
 		category = megastructures
 		cost = {
@@ -244,14 +23,19 @@ gatewayBuild_gateway_replaced = {
 	}
 
 	possible = {
-		OR = {
+		AND = {
 			exists = starbase
-			has_owner = no
+		}
+		custom_tooltip = {
+			fail_text = "gatewayBuild_requires_foreign_border"
+			NOT = {
+				is_inside_border = from
+			}
 		}
 		custom_tooltip = { #owner: territory owner from: construction ship owner
 			fail_text = "gatewayBuild_requires_inside_border_or_federation_policy"
 			OR = {
-				is_inside_border = from
+				#is_inside_border = from
 				owner = {
 					OR = {
 						AND = {
@@ -275,32 +59,18 @@ gatewayBuild_gateway_replaced = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = "requires_surveyed_system"
-			NOT = {
-				any_system_planet = {
-					is_surveyed = {
-						who = prev.from
-						status = no
-					}
-				}
-			}
-		}
-		custom_tooltip = {
 			fail_text = "requires_no_existing_gateway"
 			NOR = {
 				has_megastructure = gateway_0
 				has_megastructure = gateway_restored
 				has_megastructure = gateway_final
 				has_megastructure = gatewayBuild_gateway_replaced
+				has_megastructure = gatewayBuild_gateway_new
 			}
 		}
 		custom_tooltip = {
 			fail_text = "gatewayBuild_requires_ruined_gateway_to_replace"
 			has_megastructure = gateway_ruined
-		}
-		custom_tooltip = {
-			fail_text = "requires_technology_gateway_construction"
-			from = { has_technology = tech_gateway_construction }
 		}
 	}
 	#upgrade_from = {
@@ -357,11 +127,140 @@ gatewayBuild_gateway_replaced = {
 				finish_upgrade = yes
 			}
 		}
-		from = {
-			country_event = { id = apoc.12 }
-			country_event = { id = apoc.10 }
-			country_event = { id = origin.1050 }
+		if = {
+			limit = { exists = from } #does not always exist when upgraded from script via "finish_upgrade = yes"
+			from = {
+				country_event = { id = apoc.12 }
+				country_event = { id = apoc.10 }
+			}
 		}
 	}
+}
 
+# New gateway in foreign space
+gatewayBuild_gateway_new = {
+	entity = "gateway_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes 						# indicates this will use "free" placement between the system's inner and outer ring
+															# if this option is active, the placement_rules will be completely ignored
+	show_galactic_map_icon = no
+	build_time = 2880
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			energy = 6000
+			influence = 100
+		}
+	}
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+
+	potential = {
+		has_technology = tech_gateway_construction
+	}
+
+	possible = {
+		AND = {
+			exists = starbase
+		}
+		custom_tooltip = {
+			fail_text = "gatewayBuild_requires_foreign_border"
+			NOT = {
+				is_inside_border = from
+			}
+		}
+		custom_tooltip = { #owner: territory owner from: construction ship owner
+			fail_text = "gatewayBuild_requires_inside_border_or_federation_policy"
+			OR = {
+				#is_inside_border = from
+				owner = {
+					OR = {
+						AND = {
+							is_overlord_to = from
+							has_policy_flag = "gatewayBuild_permitted"
+						}
+						AND = {
+							is_in_federation_with = from
+							federation = {
+								has_federation_law = gateway_build_yes
+							}
+						}
+					}
+				}
+				from = {
+					is_overlord_to = prev.owner
+				}
+				owner.overlord = {
+					is_same_empire = from.overlord
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_gateway"
+			NOR = {
+				has_megastructure = gateway_0
+				has_megastructure = gateway_restored
+				has_megastructure = gateway_final
+				has_megastructure = gatewayBuild_gateway_new
+				has_megastructure = gateway_ruined
+			}
+		}
+	}
+	#upgrade_from = {
+	#	gateway_0
+	#}
+	placement_rules = {			# those would be ignored since the gateway is being "free-placed" between the inner and outer radius of the system
+	}
+	
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 11
+		
+		modifier = {
+			factor = 6
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+
+		modifier = {
+			factor = 0
+			any_neighbor_system = { 
+				OR = {
+					has_megastructure = gateway_0
+					has_megastructure = gateway_restored
+					has_megastructure = gateway_final
+				}
+			}
+		}		
+	}
+
+	bypass_type = gateway
+
+	on_build_start = {}
+	on_build_cancel = {}	
+	on_build_complete = {
+		every_system_megastructure = {
+			limit = {
+				is_megastructure_type = gatewayBuild_gateway_new
+			}
+			solar_system = {
+				spawn_megastructure = { 
+					type = "gateway_final"
+					coords_from = prev
+					owner = owner
+					graphical_culture = fromfrom
+				}
+			}
+			remove_megastructure = this
+		}
+		if = {
+			from = {
+				country_event = { id = apoc.13 }
+				country_event = { id = apoc.11 }
+			}
+		}
+	}
 }

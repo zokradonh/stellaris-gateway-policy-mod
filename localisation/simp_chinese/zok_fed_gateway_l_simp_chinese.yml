@@ -13,9 +13,13 @@
  gatewayBuild_permitted_desc:0 "星门多多益善。\n\n§E允许附庸在我们境内建造星门§!\n"
  gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$当前政策或联邦法律不允许在我国境外，盟友境外或附庸境外建造星门。"
  gatewayBuild_gateway_replaced:0 "星门修复器"
- gatewayBuild_gateway_replaced_DESC:0 "修复星门""
+ gatewayBuild_gateway_replaced_DESC:0 "修复星门
  gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "用以修复受损星门的巨构"
+ gatewayBuild_gateway_new:0 "海外星门"
+ gatewayBuild_gateway_new_DESC:0 "位于外国领土内的星门"
+ gatewayBuild_gateway_new_MEGASTRUCTURE_DETAILS:0 "我们可以在联邦成员或附属国的领土内建造这种星门。"
  gatewayBuild_requires_ruined_gateway_to_replace:0 "$TRIGGER_FAIL$同一星系中必须有损坏的星门以供修理。"
+ gatewayBuild_requires_foreign_border:0 "$TRIGGER_FAIL$我们只能在国外建造这种星门"
  gateway_final_MEGASTRUCTURE_DETAILS:0 "一个允许舰船通过亚空间瞬间移动到其他星门的传送门。"
 
 #####################################
