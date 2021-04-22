@@ -257,6 +257,8 @@ gatewayBuild_gateway_new = {
 			remove_megastructure = this
 		}
 		if = {
+			# Vanilla code. Needed?
+			limit = { exists = from } #does not always exist when upgraded from script via "finish_upgrade = yes"
 			from = {
 				country_event = { id = apoc.13 }
 				country_event = { id = apoc.11 }
