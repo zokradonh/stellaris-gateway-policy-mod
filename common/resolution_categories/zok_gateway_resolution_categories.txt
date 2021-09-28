@@ -1,0 +1,9 @@
+resolution_category_emperor_gateways = {
+	group = galactic_empire
+	icon = "GFX_resolution_imperial_institutions"
+	resolution_types = {
+		"resolution_zok_gateways_allow_emperor"
+		"resolution_zok_gateways_allow_council"
+		"resolution_zok_gateways_allow_all"
+	}
+}

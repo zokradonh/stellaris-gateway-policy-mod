@@ -51,6 +51,23 @@ gatewayBuild_gateway_replaced = {
 					}
 				}
 				from = {
+					OR = {
+						AND = {
+							is_galactic_emperor = yes
+							is_active_resolution = resolution_zok_gateways_allow_emperor
+						}
+						AND = {
+							is_galactic_emperor = yes
+							is_part_of_galactic_council = yes
+							is_active_resolution = resolution_zok_gateways_allow_council
+						}
+						AND = {
+							is_galactic_community_member = yes
+							is_active_resolution = resolution_zok_gateways_allow_all	
+						}
+					}
+				}
+				from = {
 					is_overlord_to = prev.owner
 				}
 				owner.overlord = {
@@ -175,8 +192,7 @@ gatewayBuild_gateway_new = {
 		custom_tooltip = { #owner: territory owner from: construction ship owner
 			fail_text = "gatewayBuild_requires_inside_border_or_federation_policy"
 			OR = {
-				#is_inside_border = from
-				owner = {
+				owner = { # allow if territory owner ( is overlord of construction ship owner and if overlord has the special policy set ) or ( is in federation with construction ship owner and the federation has the special law active )
 					OR = {
 						AND = {
 							is_overlord_to = from
@@ -191,9 +207,26 @@ gatewayBuild_gateway_new = {
 					}
 				}
 				from = {
+					OR = {
+						AND = {
+							is_galactic_emperor = yes
+							is_active_resolution = resolution_zok_gateways_allow_emperor
+						}
+						AND = {
+							is_galactic_emperor = yes
+							is_part_of_galactic_council = yes
+							is_active_resolution = resolution_zok_gateways_allow_council
+						}
+						AND = {
+							is_galactic_community_member = yes
+							is_active_resolution = resolution_zok_gateways_allow_all	
+						}
+					}
+				}
+				from = { # allow to build if construction ship is owned by overlord of territory owner
 					is_overlord_to = prev.owner
 				}
-				owner.overlord = {
+				owner.overlord = { # allow if overlord of construction ship owner is same as overlord of territory owner
 					is_same_empire = from.overlord
 				}
 			}
