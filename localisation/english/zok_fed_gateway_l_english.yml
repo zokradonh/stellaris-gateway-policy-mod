@@ -33,3 +33,22 @@
  gateway_build_no_desc:0 "Federation members are prohibited to build gateways in other member's territory."
  gateway_build_yes:0 "Allowed"
  gateway_build_yes_desc:0 "Federation members are allowed to build gateways in other member's territory."
+ federation_law_category_gateway_build_cooldown:0 "$federation_centralization_cooldown$"
+
+#####################################
+# Galactic Empire Resolutions
+#####################################
+
+ resolution_zok_gateways_allow_emperor:0 "Imperial Gateways by Emperor"
+ resolution_zok_gateways_allow_emperor_desc:0 "Their Imperial Majesty is allowed to build gateways in the territory of subjects."
+ resolution_zok_gateways_allow_council:0 "Imperial Gateways by Emperor and Imperial Council"
+ resolution_zok_gateways_allow_council_desc:0 "The emperor and the Imperial Council is allowed to build gateways in the territory of subjects."
+ resolution_zok_gateways_allow_all:0 "General Imperial Gateways Order"
+ resolution_zok_gateways_allow_all_desc:0 "All members of the Imperium are allowed to build gateways throughout the Imperium."
+ resolution_category_emperor_gateways:0 "Imperial Gateways"
+ resolution_zok_gateways_allow_emperor_repeal:0 "§RRepeal $resolution_zok_gateways_allow_emperor$§!"
+ resolution_zok_gateways_allow_emperor_repeal_desc:0 "Their Imperial Majesty is not interested in investments to subjects' infrastructure anymore."
+ resolution_zok_gateways_allow_council_repeal:0 "§RRepeal $resolution_zok_gateways_allow_council$§!"
+ resolution_zok_gateways_allow_council_repeal_desc:0 "Only Their Imperial Majesty should be allowed to use the space of subjects."
+ resolution_zok_gateways_allow_all_repeal:0 "§RRepeal $resolution_zok_gateways_allow_all$§!"
+ resolution_zok_gateways_allow_all_repeal_desc:0 "Members should not have the right to build in other member's territory."

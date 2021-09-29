@@ -33,3 +33,22 @@
  gateway_build_no_desc:0 "Mitglieder können nur innerhalb der eigenen Grenzen Sternentore bauen/reparieren."
  gateway_build_yes:0 "Erlaubt"
  gateway_build_yes_desc:0 "Mitglieder können auch im Gebiet von anderen Mitgliedern Sternentore bauen/reparieren."
+ federation_law_category_gateway_build_cooldown:0 "$federation_centralization_cooldown$"
+
+#####################################
+# Galactic Empire Resolutions
+#####################################
+
+ resolution_zok_gateways_allow_emperor:0 "Sternentorbau durch Herrscher"
+ resolution_zok_gateways_allow_emperor_desc:0 "Der Herrscher des Galaktischen Imperiums kann bei allen Mitgliedern Sternentore bauen."
+ resolution_zok_gateways_allow_council:0 "Sternentorbau durch Herrscher und Rat"
+ resolution_zok_gateways_allow_council_desc:0 "Der Herrscher und der Rat des Galaktischen Imperiums kann bei allen Mitgliedern Sternentore bauen."
+ resolution_zok_gateways_allow_all:0 "Allgemeine Sternentorbauerlaubnis"
+ resolution_zok_gateways_allow_all_desc:0 "Alle Mitglieder des Galaktischen Imperiums können überall Sternentore bauen."
+ resolution_category_emperor_gateways:0 "Galaktischer Sternentorbau"
+ resolution_zok_gateways_allow_emperor_repeal:0 "§R$resolution_zok_gateways_allow_emperor$ widerrufen§!"
+ resolution_zok_gateways_allow_emperor_repeal_desc:0 "Warum sollte der Herrscher des Imperiums seine Ressourcen in ein niederes Mitglied investieren?"
+ resolution_zok_gateways_allow_council_repeal:0 "§R$resolution_zok_gateways_allow_council$ widerrufen§!"
+ resolution_zok_gateways_allow_council_repeal_desc:0 "Nur der Herrscher des Imperiums sollte das Recht besitzen innerhalb der Grenzen von Mitgliedern zu bauen."
+ resolution_zok_gateways_allow_all_repeal:0 "§R$resolution_zok_gateways_allow_all$ widerrufen§!"
+ resolution_zok_gateways_allow_all_repeal_desc:0 "Die Untertanen sollten nicht mit Rechten bestückt werden, die über ihre eigenen Grenzen hinaus gehen."

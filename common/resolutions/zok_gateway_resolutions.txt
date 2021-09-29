@@ -1,0 +1,460 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_normal = 6
+
+@resolution_cost_t1 = 100
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 300
+
+@resolution_flag_timer = 360
+
+resolution_zok_gateways_allow_emperor = {
+	icon = "GFX_resolution_imperial_armada"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+
+	modifier = {
+	}
+
+	effect = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_nemesis = yes
+		is_galactic_emperor = yes
+	}
+
+	active = {
+		has_galactic_emperor = yes
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_normal
+
+
+		modifier = {
+			factor = 0.8
+			OR = {
+				is_authoritarian = yes
+			}
+		}
+
+		modifier = {
+			factor = 0.2
+			OR = {
+				is_xenophobe = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				is_materialist = yes
+				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+
+		modifier = {
+			factor = 2
+			is_galactic_emperor = yes
+		}
+	}
+}
+
+resolution_zok_gateways_allow_emperor_repeal = {
+	icon = "GFX_resolution_abolish_imperial_council"
+
+	fire_and_forget = yes
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	modifier = {
+	}
+
+	effect = {
+		hidden_effect = {
+			cancel_resolution = "resolution_zok_gateways_allow_emperor"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = resolution_zok_gateways_allow_emperor
+	}
+
+	active = {
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				is_authoritarian = yes
+				is_xenophobe = yes
+			}
+		}
+
+		modifier = {
+			factor = 0
+			OR = {
+				is_egalitarian = yes
+				is_materialist = yes
+				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+
+		modifier = {
+			factor = 0
+			is_galactic_emperor = yes
+		}
+	}
+}
+
+
+resolution_zok_gateways_allow_council = {
+	icon = "GFX_resolution_imperial_armada"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+
+	modifier = {
+	}
+
+	effect = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_nemesis = yes
+		is_galactic_emperor = yes
+		is_galactic_council_established = yes
+		OR = {
+			is_active_resolution = "resolution_zok_gateways_allow_emperor"
+			is_active_resolution = "resolution_zok_gateways_allow_all"
+		}
+		
+	}
+
+	active = {
+		has_galactic_emperor = yes
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_normal
+
+
+		modifier = {
+			factor = 0.8
+			OR = {
+				is_authoritarian = yes
+				is_xenophobe = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				is_egalitarian = yes
+				is_materialist = yes
+				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+
+		modifier = {
+			factor = 2
+			is_part_of_galactic_council = yes
+		}
+	}
+}
+
+resolution_zok_gateways_allow_council_repeal = {
+	icon = "GFX_resolution_abolish_imperial_council"
+
+	fire_and_forget = yes
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	modifier = {
+	}
+
+	effect = {
+		hidden_effect = {
+			cancel_resolution = "resolution_zok_gateways_allow_council"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = resolution_zok_gateways_allow_council
+	}
+
+	active = {
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				is_authoritarian = yes
+				is_xenophobe = yes
+			}
+		}
+
+		modifier = {
+			factor = 0
+			OR = {
+				is_egalitarian = yes
+				is_materialist = yes
+				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+
+		modifier = {
+			factor = 0
+			is_part_of_galactic_council = yes
+		}
+	}
+}
+
+resolution_zok_gateways_allow_all = {
+	icon = "GFX_resolution_imperial_armada"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+
+	modifier = {
+	}
+
+	effect = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_nemesis = yes
+		is_galactic_emperor = yes
+		OR = {
+			is_active_resolution = "resolution_zok_gateways_allow_emperor"
+			is_active_resolution = "resolution_zok_gateways_allow_council"
+		}
+	}
+
+	active = {
+		has_galactic_emperor = yes
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+
+
+		modifier = {
+			factor = 0.6
+			OR = {
+				is_authoritarian = yes
+				is_xenophobe = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				is_egalitarian = yes
+				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+
+	}
+}
+
+resolution_zok_gateways_allow_all_repeal = {
+	icon = "GFX_resolution_abolish_imperial_council"
+
+	fire_and_forget = yes
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	modifier = {
+	}
+
+	effect = {
+		hidden_effect = {
+			cancel_resolution = "resolution_zok_gateways_allow_all"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = resolution_zok_gateways_allow_all
+	}
+
+	active = {
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_disliked
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				is_authoritarian = yes
+				is_xenophobe = yes
+			}
+		}
+
+		modifier = {
+			factor = 0
+			OR = {
+				is_egalitarian = yes
+				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+	}
+}

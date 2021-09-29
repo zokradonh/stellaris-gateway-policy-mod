@@ -25,11 +25,11 @@ gateway_build_no = {
 	}
 	
 	ai_weight = {
-		base = 51
+		base = 0
 		
 		#Behaviour-specific	
 		modifier = {
-			add = 50
+			add = 70
 			is_xenophobe = yes
 		}
 	}
@@ -63,11 +63,11 @@ gateway_build_yes = {
 	}
 	
 	ai_weight = {
-		base = 51
+		base = 50
 				
 		modifier = {
-			add = 25
-			relative_power = { who = from value >= superior }
+			add = 30
+			relative_power = { who = from category = technology value >= superior }
 		}
 		
 		#Behaviour-specific	
@@ -81,10 +81,15 @@ gateway_build_yes = {
 		}
 		modifier = {
 			add = 25
-			has_ai_personality = federation_builders
+			OR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers	
+				has_ai_personality = harmonious_hierarchy
+			}
 		}
 		modifier = {
-			add = -25
+			add = -50
 			is_xenophobe = yes
 		}
 	}
