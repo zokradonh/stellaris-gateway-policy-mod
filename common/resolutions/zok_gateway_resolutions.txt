@@ -63,11 +63,20 @@ resolution_zok_gateways_allow_emperor = {
 		}
 
 		modifier = {
+			factor = 0.2
+			OR = {
+				is_xenophobe = yes
+			}
+		}
+
+		modifier = {
 			factor = 1.2
 			OR = {
-				is_egalitarian = yes
 				is_materialist = yes
 				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
 			}
 		}
 
@@ -130,20 +139,24 @@ resolution_zok_gateways_allow_emperor_repeal = {
 			factor = 1.2
 			OR = {
 				is_authoritarian = yes
+				is_xenophobe = yes
 			}
 		}
 
 		modifier = {
-			factor = 0.4
+			factor = 0
 			OR = {
 				is_egalitarian = yes
 				is_materialist = yes
 				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
 			}
 		}
 
 		modifier = {
-			factor = 0.1
+			factor = 0
 			is_galactic_emperor = yes
 		}
 	}
@@ -207,6 +220,7 @@ resolution_zok_gateways_allow_council = {
 			factor = 0.8
 			OR = {
 				is_authoritarian = yes
+				is_xenophobe = yes
 			}
 		}
 
@@ -216,6 +230,9 @@ resolution_zok_gateways_allow_council = {
 				is_egalitarian = yes
 				is_materialist = yes
 				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
 			}
 		}
 
@@ -278,20 +295,24 @@ resolution_zok_gateways_allow_council_repeal = {
 			factor = 1.2
 			OR = {
 				is_authoritarian = yes
+				is_xenophobe = yes
 			}
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0
 			OR = {
 				is_egalitarian = yes
 				is_materialist = yes
 				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
 			}
 		}
 
 		modifier = {
-			factor = 0.4
+			factor = 0
 			is_part_of_galactic_council = yes
 		}
 	}
@@ -361,6 +382,9 @@ resolution_zok_gateways_allow_all = {
 			OR = {
 				is_egalitarian = yes
 				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
 			}
 		}
 
@@ -423,10 +447,13 @@ resolution_zok_gateways_allow_all_repeal = {
 		}
 
 		modifier = {
-			factor = 0.4
+			factor = 0
 			OR = {
 				is_egalitarian = yes
 				has_ai_personality = peaceful_traders
+				has_ai_personality = federation_builders
+				has_ai_personality = erudite_explorers
+				has_ai_personality = harmonious_hierarchy
 			}
 		}
 	}
