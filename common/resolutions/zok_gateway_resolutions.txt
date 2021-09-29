@@ -9,7 +9,7 @@
 @resolution_flag_timer = 360
 
 resolution_zok_gateways_allow_emperor = {
-	icon = "GFX_resolution_imperial_council_size"
+	icon = "GFX_resolution_imperial_armada"
 
 	resources = {
 		category = resolutions
@@ -88,7 +88,7 @@ resolution_zok_gateways_allow_emperor = {
 }
 
 resolution_zok_gateways_allow_emperor_repeal = {
-	icon = "GFX_resolution_imperial_council_size"
+	icon = "GFX_resolution_abolish_imperial_council"
 
 	fire_and_forget = yes
 
@@ -164,7 +164,7 @@ resolution_zok_gateways_allow_emperor_repeal = {
 
 
 resolution_zok_gateways_allow_council = {
-	icon = "GFX_resolution_imperial_council_size"
+	icon = "GFX_resolution_imperial_armada"
 
 	resources = {
 		category = resolutions
@@ -244,7 +244,7 @@ resolution_zok_gateways_allow_council = {
 }
 
 resolution_zok_gateways_allow_council_repeal = {
-	icon = "GFX_resolution_imperial_council_size"
+	icon = "GFX_resolution_abolish_imperial_council"
 
 	fire_and_forget = yes
 
@@ -319,7 +319,7 @@ resolution_zok_gateways_allow_council_repeal = {
 }
 
 resolution_zok_gateways_allow_all = {
-	icon = "GFX_resolution_imperial_council_size"
+	icon = "GFX_resolution_imperial_armada"
 
 	resources = {
 		category = resolutions
@@ -392,7 +392,7 @@ resolution_zok_gateways_allow_all = {
 }
 
 resolution_zok_gateways_allow_all_repeal = {
-	icon = "GFX_resolution_imperial_council_size"
+	icon = "GFX_resolution_abolish_imperial_council"
 
 	fire_and_forget = yes
 
