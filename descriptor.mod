@@ -1,4 +1,4 @@
-name="Gateway Policy Federation"
+name="Gateways Policy/Federation/Imperium"
 tags={
 	"Diplomacy"
 	"Gameplay"
