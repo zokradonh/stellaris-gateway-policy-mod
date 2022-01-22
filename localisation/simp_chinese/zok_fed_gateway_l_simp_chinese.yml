@@ -32,3 +32,4 @@
  gateway_build_no_desc:0 "联邦成员不能在其他成员境内修复或建造星门。"
  gateway_build_yes:0 "允许"
  gateway_build_yes_desc:0 "联邦成员可以在其他成员境内修复或建造星门。"
+ federation_law_category_gateway_build_cooldown:0 "$federation_centralization_cooldown$"

@@ -33,3 +33,4 @@
  gateway_build_no_desc:0 "Federation members are prohibited to build gateways in other member's territory."
  gateway_build_yes:0 "Allowed"
  gateway_build_yes_desc:0 "Federation members are allowed to build gateways in other member's territory."
+ federation_law_category_gateway_build_cooldown:0 "$federation_centralization_cooldown$"
