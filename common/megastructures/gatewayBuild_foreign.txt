@@ -57,8 +57,10 @@ gatewayBuild_gateway_replaced = {
 							is_active_resolution = resolution_zok_gateways_allow_emperor
 						}
 						AND = {
-							is_galactic_emperor = yes
-							is_part_of_galactic_council = yes
+							OR = {
+								is_galactic_emperor = yes
+								is_part_of_galactic_council = yes
+							}
 							is_active_resolution = resolution_zok_gateways_allow_council
 						}
 						AND = {
@@ -213,8 +215,10 @@ gatewayBuild_gateway_new = {
 							is_active_resolution = resolution_zok_gateways_allow_emperor
 						}
 						AND = {
-							is_galactic_emperor = yes
-							is_part_of_galactic_council = yes
+							OR = {
+								is_galactic_emperor = yes
+								is_part_of_galactic_council = yes
+							}
 							is_active_resolution = resolution_zok_gateways_allow_council
 						}
 						AND = {
