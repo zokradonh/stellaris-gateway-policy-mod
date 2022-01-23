@@ -3,6 +3,7 @@
 #####################################
 # POLICIES
 #####################################
+
  policy_gatewayBuild:0 "附庸与星门"
  policy_gatewayBuild_desc:0 "我们可以决定是否允许附庸在我们境内建造星门。\n"
  gatewayBuild_denied:0 "禁止"
@@ -14,7 +15,7 @@
  gatewayBuild_requires_inside_border_or_federation_policy:0 "$TRIGGER_FAIL$当前政策或联邦法律不允许在我国境外，盟友境外或附庸境外建造星门。"
  gatewayBuild_gateway_replaced:0 "星门修复器"
  gatewayBuild_gateway_replaced_DESC:0 "修复星门"
- gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "用以修复受损星门的巨构"
+ gatewayBuild_gateway_replaced_MEGASTRUCTURE_DETAILS:0 "用以修复联邦或附庸境内受损星门的巨构。"
  gatewayBuild_gateway_new:0 "海外星门"
  gatewayBuild_gateway_new_DESC:0 "位于外国领土内的星门"
  gatewayBuild_gateway_new_MEGASTRUCTURE_DETAILS:0 "我们可以在联邦成员或附属国的领土内建造这种星门。"
@@ -33,3 +34,21 @@
  gateway_build_yes:0 "允许"
  gateway_build_yes_desc:0 "联邦成员可以在其他成员境内修复或建造星门。"
  federation_law_category_gateway_build_cooldown:0 "$federation_centralization_cooldown$"
+
+#####################################
+# Galactic Empire Resolutions
+#####################################
+
+ resolution_zok_gateways_allow_emperor:0 "仅限皇帝陛下"
+ resolution_zok_gateways_allow_emperor_desc:0 "皇帝陛下可以在附属国境内建造星门。"
+ resolution_zok_gateways_allow_council:0 "皇帝陛下与议会"
+ resolution_zok_gateways_allow_council_desc:0 "皇帝陛下与议会成员均可以在附属国境内建造星门。"
+ resolution_zok_gateways_allow_all:0 "所有帝国成员"
+ resolution_zok_gateways_allow_all_desc:0 "所有的帝国成员都可以在帝国全境内建造星门。"
+ resolution_category_emperor_gateways:0 "帝国星门"
+ resolution_zok_gateways_allow_emperor_repeal:0 "§R废止决议： $resolution_zok_gateways_allow_emperor$§!"
+ resolution_zok_gateways_allow_emperor_repeal_desc:0 "皇帝陛下失去了投资附属国境内基建的兴趣。"
+ resolution_zok_gateways_allow_council_repeal:0 "§R废止决议： $resolution_zok_gateways_allow_council$§!"
+ resolution_zok_gateways_allow_council_repeal_desc:0 "只有皇帝陛下才有权威使用附属国的宙域。"
+ resolution_zok_gateways_allow_all_repeal:0 "§R废止决议： $resolution_zok_gateways_allow_all$§!"
+ resolution_zok_gateways_allow_all_repeal_desc:0 "帝国的成员不应该享有在他国境内修建星门的权利。"
