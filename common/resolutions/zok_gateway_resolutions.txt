@@ -57,16 +57,14 @@ resolution_zok_gateways_allow_emperor = {
 
 		modifier = {
 			factor = 0.8
-			OR = {
-				is_authoritarian = yes
-			}
+			is_authoritarian = yes		
+			desc = ethic_authoritarian
 		}
 
 		modifier = {
 			factor = 0.2
-			OR = {
-				is_xenophobe = yes
-			}
+			is_xenophobe = yes
+			desc = ethic_xenophobe
 		}
 
 		modifier = {
@@ -78,11 +76,13 @@ resolution_zok_gateways_allow_emperor = {
 				has_ai_personality = erudite_explorers
 				has_ai_personality = harmonious_hierarchy
 			}
+			desc = gal_com_trader_ai_personality
 		}
 
 		modifier = {
 			factor = 2
 			is_galactic_emperor = yes
+			desc = galactic_emperor
 		}
 	}
 }
@@ -137,10 +137,14 @@ resolution_zok_gateways_allow_emperor_repeal = {
 
 		modifier = {
 			factor = 1.2
-			OR = {
-				is_authoritarian = yes
-				is_xenophobe = yes
-			}
+			is_authoritarian = yes
+			desc = ethic_authoritarian
+		}
+
+		modifier = {
+			factor = 1.2
+			is_xenophobe = yes
+			desc = ethic_xenophobe
 		}
 
 		modifier = {
@@ -153,11 +157,13 @@ resolution_zok_gateways_allow_emperor_repeal = {
 				has_ai_personality = erudite_explorers
 				has_ai_personality = harmonious_hierarchy
 			}
+			desc = gal_com_trader_ai_personality
 		}
 
 		modifier = {
 			factor = 0
-			is_galactic_emperor = yes
+			is_galactic_emperor = yes			
+			desc = galactic_emperor
 		}
 	}
 }
@@ -218,10 +224,14 @@ resolution_zok_gateways_allow_council = {
 
 		modifier = {
 			factor = 0.8
-			OR = {
-				is_authoritarian = yes
-				is_xenophobe = yes
-			}
+			is_authoritarian = yes		
+			desc = ethic_authoritarian
+		}
+
+		modifier = {
+			factor = 0.8
+			is_xenophobe = yes
+			desc = ethic_xenophobe
 		}
 
 		modifier = {
@@ -234,11 +244,13 @@ resolution_zok_gateways_allow_council = {
 				has_ai_personality = erudite_explorers
 				has_ai_personality = harmonious_hierarchy
 			}
+			desc = gal_com_trader_ai_personality
 		}
 
 		modifier = {
 			factor = 2
 			is_part_of_galactic_council = yes
+			desc = gal_com_on_galatic_council
 		}
 	}
 }
@@ -293,10 +305,14 @@ resolution_zok_gateways_allow_council_repeal = {
 
 		modifier = {
 			factor = 1.2
-			OR = {
-				is_authoritarian = yes
-				is_xenophobe = yes
-			}
+			is_authoritarian = yes
+			desc = ethic_authoritarian
+		}
+
+		modifier = {
+			factor = 1.2
+			is_xenophobe = yes
+			desc = ethic_xenophobe
 		}
 
 		modifier = {
@@ -309,11 +325,13 @@ resolution_zok_gateways_allow_council_repeal = {
 				has_ai_personality = erudite_explorers
 				has_ai_personality = harmonious_hierarchy
 			}
+			desc = gal_com_trader_ai_personality
 		}
 
 		modifier = {
 			factor = 0
 			is_part_of_galactic_council = yes
+			desc = gal_com_on_galatic_council
 		}
 	}
 }
@@ -371,10 +389,14 @@ resolution_zok_gateways_allow_all = {
 
 		modifier = {
 			factor = 0.6
-			OR = {
-				is_authoritarian = yes
-				is_xenophobe = yes
-			}
+			is_authoritarian = yes
+			desc = ethic_authoritarian
+		}
+
+		modifier = {
+			factor = 0.6
+			is_xenophobe = yes
+			desc = ethic_xenophobe
 		}
 
 		modifier = {
@@ -386,6 +408,7 @@ resolution_zok_gateways_allow_all = {
 				has_ai_personality = erudite_explorers
 				has_ai_personality = harmonious_hierarchy
 			}
+			desc = gal_com_trader_ai_personality
 		}
 
 	}
@@ -440,10 +463,14 @@ resolution_zok_gateways_allow_all_repeal = {
 
 		modifier = {
 			factor = 1.2
-			OR = {
-				is_authoritarian = yes
-				is_xenophobe = yes
-			}
+			is_authoritarian = yes
+			desc = ethic_authoritarian
+		}
+
+		modifier = {
+			factor = 1.2
+			is_xenophobe = yes
+			desc = ethic_xenophobe
 		}
 
 		modifier = {
@@ -455,6 +482,7 @@ resolution_zok_gateways_allow_all_repeal = {
 				has_ai_personality = erudite_explorers
 				has_ai_personality = harmonious_hierarchy
 			}
+			desc = gal_com_trader_ai_personality
 		}
 	}
 }

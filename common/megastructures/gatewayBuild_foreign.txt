@@ -15,8 +15,8 @@ gatewayBuild_gateway_replaced = {
 			energy = 6000
 		}
 	}
-	construction_blocks_others = no
-	construction_blocked_by_others = no
+
+	construction_blocks_and_blocked_by = self_type
 
 	potential = {
 		has_technology = tech_gateway_activation
@@ -171,11 +171,11 @@ gatewayBuild_gateway_new = {
 		cost = {
 			alloys = 5000
 			energy = 6000
-			influence = 100
+			influence = 75
 		}
 	}
-	construction_blocks_others = no
-	construction_blocked_by_others = no
+	
+	construction_blocks_and_blocked_by = self_type
 
 	potential = {
 		has_technology = tech_gateway_construction
